@@ -9,6 +9,48 @@
 
 </head>
 <body>
+    <header class="flex flex-col shadow fixed top-0 w-full z-10">  
+        <!-- <nav class="flex flex-col bg-[rgb(249,247,243)] p-4 shadow fixed top-0 w-full z-10"> -->
+            <nav class="bg-[rgb(249,247,243)]">
+                <div class="flex flex-col md:flex-row items-center justify-between p-3 m-0">
+                    <div class="mb-2 md:mb-0">
+                        <button class="btn">Blog</button>
+                    </div>
+                    
+                    <div class="flex items-center justify-center flex-grow mb-2 md:mb-0">
+                        <img src="assets/logo.png" alt="" class="h-6 mr-2">
+                        <h4 class="text-lg">
+                            Donate Bangladesh
+                        </h4>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <img src="assets/coin.png" alt="" class="h-6 mr-2">
+                        <div class="stats shadow ml-2">
+                            <div class="stat">
+                                <div id="main-balance" class="stat-value text-lg">5000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+        <div class="flex justify-center w-full mt-0 bg-white p-2">
+            <div class="flex w-60 flex-col md:flex-row md:space-x-4">
+                <div class="card bg-base-300 rounded-box grid h-10 w-full flex-grow place-items-center mb-4 md:mb-0 transition-colors duration-300" 
+                     onclick="this.style.backgroundColor='rgb(180, 244, 97)'">
+                    Donation
+                </div>
+                <div class="card bg-base-300 rounded-box grid h-10 w-full flex-grow place-items-center transition-colors duration-300" 
+                     onclick="this.style.backgroundColor='rgb(180, 244, 97)'">
+                    History
+                </div>
+            </div>
+        </div>
+        
+        
+
+    </header>
     
     <main class="mt-36">    
         
@@ -42,7 +84,7 @@
                 <div class="card bg-base-100 w-full max-w-full shrink-0">
                     <form class="card-body">
                         <div class="form-control">
-                            <input id="input-add-money" type="number" placeholder="Write Donate Amount" class="input input-bordered w-full" required />
+                            <input id="input-add-money" type="number" autocomplete="off" placeholder="Write Donate Amount" class="input input-bordered w-full" required />
                         </div>
                         
                         <div class="form-control mt-6">
@@ -65,7 +107,7 @@
                     <img src="assets/coin.png" alt="" class="h-6 mr-2">
                     <div class="stats shadow ml-2">
                         <div class="stat">
-                            <div class="stat-value text-lg">5000</div>
+                            <div id="feni-balance" class="stat-value text-lg">5000</div>
                         </div>
                     </div>
                 </div>
@@ -79,11 +121,11 @@
                 <div class="card bg-base-100 w-full max-w-full shrink-0">
                     <form class="card-body">
                         <div class="form-control">
-                            <input type="email" placeholder="Write Donate Amount" class="input input-bordered w-full" required />
+                            <input id="input-add-feni-money" type="number" autocomplete="off" placeholder="Write Donate Amount" class="input input-bordered w-full" required />
                         </div>
                         
                         <div class="form-control mt-6">
-                            <button class="btn btn-primary bg-[rgb(180,244,97)] text-black">Donate Now</button>
+                            <button id="btn-add-money-two" class="btn btn-primary bg-[rgb(180,244,97)] text-black">Donate Now</button>
                         </div>
                     </form>
                 </div>
@@ -102,12 +144,12 @@
                     <img src="assets/coin.png" alt="" class="h-6 mr-2">
                     <div class="stats shadow ml-2">
                         <div class="stat">
-                            <div class="stat-value text-lg">5000</div>
+                            <div id="quata-balance" class="stat-value text-lg">5000</div>
                         </div>
                     </div>
                 </div>
                 <h3 class="text-xl font-bold mb-2">
-                    Donate for Flood at Noakhali, Bangladesh
+                    Aid for Injured in the Quota Movement
                 </h3>
                 <p class="mb-4">
                     The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
@@ -116,11 +158,11 @@
                 <div class="card bg-base-100 w-full max-w-full shrink-0">
                     <form class="card-body">
                         <div class="form-control">
-                            <input type="email" placeholder="Write Donate Amount" class="input input-bordered w-full" required />
+                            <input id="input-add-quata-money" type="number" autocomplete="off" placeholder="Write Donate Amount" class="input input-bordered w-full" required />
                         </div>
                         
                         <div class="form-control mt-6">
-                            <button class="btn btn-primary bg-[rgb(180,244,97)] text-black">Donate Now</button>
+                            <button id="btn-add-money-three" class="btn btn-primary bg-[rgb(180,244,97)] text-black">Donate Now</button>
                         </div>
                     </form>
                 </div>
@@ -133,6 +175,7 @@
     <footer class="bg-[rgb(249,247,243)] h-16">
         
     </footer>
+    <script src="js/sharedFunction.js"></script>
     <script src="js/addMoney.js"></script>
     
     
