@@ -8,6 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
         .arrow {
             transition: transform 0.3s;
         }
@@ -31,16 +36,18 @@
                     
                     <div class="flex items-center justify-center flex-grow mb-2 md:mb-0">
                         <img src="assets/logo.png" alt="" class="h-6 mr-2">
-                        <h4 class="text-lg">
+                        <h4 class="text-lg font-extrabold">
                             Donate Bangladesh
                         </h4>
                     </div>
                     
                     <div class="flex items-center">
-                        <img src="assets/coin.png" alt="" class="h-6 mr-2">
+                        <!-- <img src="assets/coin.png" alt="" class="h-6 mr-2"> -->
                         <div class="stats shadow ml-2">
-                            <div class="stat">
+                            <div class="stat flex items-center">
+                                <img src="assets/coin.png" alt="" class="h-6 mr-2">
                                 <div id="main-balance" class="stat-value text-lg">10000</div>
+                                <div> BDT</div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +68,7 @@
             </h3>
         
             <div class="shadow-lg rounded-lg w-full max-w-3xl">
-                <!-- FAQ Item 1 -->
+                
                 <div class="border-b border-gray-300">
                     <div class="flex justify-between items-center p-6 cursor-pointer" onclick="toggleAnswer(0)">
                         <span class="font-bold text-lg">What is the Document Object Model(DOM)?</span>
@@ -71,8 +78,7 @@
                         The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing programs to manipulate the content, structure, and style of the document dynamically.
                     </div>
                 </div>
-        
-                <!-- FAQ Item 2 -->
+
                 <div class="border-b border-gray-300">
                     <div class="flex justify-between items-center p-6 cursor-pointer" onclick="toggleAnswer(1)">
                         <span class="font-bold text-lg">How do you select an element from the DOM?</span>
@@ -82,8 +88,7 @@
                         To select an element from the DOM, we can use various JavaScript methods, each tailored for specific use cases. Methods are document.getElementById(), document.getElementsByClassName(), document.getElementsByTagName(), For more flexible and powerful selections, document.querySelector() can be used to fetch the first element that matches a specified CSS selector, while document.querySelectorAll() retrieves a static NodeList of all matching elements.
                     </div>
                 </div>
-        
-                <!-- FAQ Item 3 -->
+
                 <div class="border-b border-gray-300">
                     <div class="flex justify-between items-center p-6 cursor-pointer" onclick="toggleAnswer(2)">
                         <span class="font-bold text-lg">What is event delegation in the context of the DOM, and why is it useful?</span>
@@ -93,8 +98,7 @@
                         Event delegation is a powerful technique in JavaScript and the DOM that allows us to manage events more efficiently by utilizing the event bubbling phase. Instead of attaching event listeners to individual child elements, we attach a single event listener to a common ancestor (parent) element. This approach allows the event to be captured by the ancestor and subsequently routed to the target child element based on the event's properties.
                     </div>
                 </div>
-        
-                <!-- FAQ Item 4 -->
+
                 <div>
                     <div class="flex justify-between items-center p-6 cursor-pointer" onclick="toggleAnswer(3)">
                         <span class="font-bold text-lg">How do you manipulate an element's attribute and styles using the DOM?</span>

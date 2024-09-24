@@ -22,6 +22,8 @@
 //     }
 // })
 
+
+
 document.getElementById('btn-add-money')
     .addEventListener('click', function (event) {
         event.preventDefault();
@@ -39,6 +41,14 @@ document.getElementById('btn-add-money')
                 alert('You do not have enough money to donate');
                 return;
             }
+            const donationModal = document.getElementById('donationModal');
+            donationModal.classList.remove('hidden');
+
+            // Close modal when the "Close Information" button is clicked
+            const closeModal = document.getElementById('closeModal');
+            closeModal.addEventListener('click', () => {
+                donationModal.classList.add('hidden');
+            });
             
             const noakhaliNewBalance = balanceFirst + addMoney;
             document.getElementById('noakhali-balance').innerText = noakhaliNewBalance;
@@ -71,6 +81,9 @@ document.getElementById('btn-add-money')
              //document.getElementById('history-container').appendChild(pp);
              document.getElementById('history-container').appendChild(donationDiv);
              document.getElementById('history-container').appendChild(donationDiv);
+
+             
+
              
         }
         else{
@@ -97,6 +110,14 @@ document.getElementById('btn-add-money')
                 alert('You do not have enough money to donate');
                 return;
             }
+            const donationModal = document.getElementById('donationModal');
+            donationModal.classList.remove('hidden');
+
+            // Close modal when the "Close Information" button is clicked
+            const closeModal = document.getElementById('closeModal');
+            closeModal.addEventListener('click', () => {
+                donationModal.classList.add('hidden');
+            });
             
             const feniNewBalance = balanceSecond + addMoney;
             document.getElementById('feni-balance').innerText = feniNewBalance;
@@ -135,7 +156,14 @@ document.getElementById('btn-add-money')
             alert('Failed to add money');
             return;
         }
-        
+        const donationModal = document.getElementById('donationModal');
+            donationModal.classList.remove('hidden');
+
+            // Close modal when the "Close Information" button is clicked
+            const closeModal = document.getElementById('closeModal');
+            closeModal.addEventListener('click', () => {
+                donationModal.classList.add('hidden');
+            });
         // primary level,wrong way to verify. do not try it at your serious website
         if(addMoney >= 1){
             if(addMoney > oldbalance){

@@ -6,6 +6,13 @@
     <title>Donation</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    
+        body {
+          font-family: 'Lexend', sans-serif;
+        }
+      </style>
 
 </head>
 <body>
@@ -13,7 +20,7 @@
         <!-- <nav class="flex flex-col bg-[rgb(249,247,243)] p-4 shadow fixed top-0 w-full z-10"> -->
             <nav class="bg-[rgb(249,247,243)]">
                 <div class="flex flex-col md:flex-row items-center justify-between p-3 m-0">
-                    <div class="mb-2 md:mb-0">
+                    <div class="mb-2 md:mb-0 font-semibold">
                         <button class="btn" style="background-color: rgb(180, 244, 97);" onclick="window.location.href='blog.html'">
                             Blog
                         </button>
@@ -22,16 +29,18 @@
                     
                     <div class="flex items-center justify-center flex-grow mb-2 md:mb-0">
                         <img src="assets/logo.png" alt="" class="h-6 mr-2">
-                        <h4 class="text-lg">
+                        <h4 class="text-lg font-extrabold">
                             Donate Bangladesh
                         </h4>
                     </div>
                     
                     <div class="flex items-center">
-                        <img src="assets/coin.png" alt="" class="h-6 mr-2">
-                        <div class="stats shadow ml-2">
-                            <div class="stat">
+                        <!-- <img src="assets/coin.png" alt="" class="h-6 mr-2"> -->
+                        <div class="stats shadow ml-2 ">
+                            <div class="stat flex items-center">
+                                <img src="assets/coin.png" alt="" class="h-6 mr-2">
                                 <div id="main-balance" class="stat-value text-lg">10000</div>
+                                <div> BDT</div>
                             </div>
                         </div>
                     </div>
@@ -68,17 +77,19 @@
                     <!-- Donate Now -->
                 <!-- </button> -->
                 <div class="flex items-center">
-                    <img src="assets/coin.png" alt="" class="h-6 mr-2">
+                    
                     <div class="stats shadow ml-2">
-                        <div class="stat">
+                        <div class="stat flex items-center">
+                            <img src="assets/coin.png" alt="" class="h-6 mr-2">
                             <div id="noakhali-balance" class="stat-value text-lg">5000</div>
+                            <div> BDT</div>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-xl font-bold mb-2">
+                <h3 class="text-xl font-bold mb-2"><br>
                     Donate for Flood at Noakhali, Bangladesh
                 </h3>
-                <p class="mb-4">
+                <p class="mb-4 text-slate-400 text-base">
                     The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
         
@@ -89,7 +100,7 @@
                         </div>
                         
                         <div class="form-control mt-6">
-                            <button id="btn-add-money" class="btn btn-primary bg-[rgb(180,244,97)] text-black">Donate Now</button>
+                            <button id="btn-add-money" class="btn btn-primary bg-[rgb(180,244,97)]  hover:bg-slate-400 text-black">Donate Now</button>
                         </div>
                     </form>
                 </div>
@@ -105,17 +116,21 @@
             <!-- Content Section -->
             <div class="w-full md:w-1/2">
                 <div class="flex items-center">
-                    <img src="assets/coin.png" alt="" class="h-6 mr-2">
+                 
                     <div class="stats shadow ml-2">
-                        <div class="stat">
+                        <div class="stat flex items-center">
+                            <img src="assets/coin.png" alt="" class="h-6 mr-2">
                             <div id="feni-balance" class="stat-value text-lg">5000</div>
+                            <div>BDT</div>
+
                         </div>
                     </div>
                 </div>
                 <h3 class="text-xl font-bold mb-2">
+                    <br>
                     Donate for Flood Relief in Feni,Bangladesh
                 </h3>
-                <p class="mb-4">
+                <p class="mb-4 text-slate-400 text-base">
                     The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                 </p>
         
@@ -126,7 +141,7 @@
                         </div>
                         
                         <div class="form-control mt-6">
-                            <button id="btn-add-money-two" class="btn btn-primary bg-[rgb(180,244,97)] text-black">Donate Now</button>
+                            <button id="btn-add-money-two" class="btn btn-primary bg-[rgb(180,244,97)]  hover:bg-slate-400 text-black">Donate Now</button>
                         </div>
                     </form>
                 </div>
@@ -142,17 +157,21 @@
             <!-- Content Section -->
             <div class="w-full md:w-1/2">
                 <div class="flex items-center">
-                    <img src="assets/coin.png" alt="" class="h-6 mr-2">
+                    
                     <div class="stats shadow ml-2">
-                        <div class="stat">
+                        <div class="stat flex items-center">
+                            <img src="assets/coin.png" alt="" class="h-6 mr-2">
                             <div id="quata-balance" class="stat-value text-lg">5000</div>
+                            <div>BDT</div>
+                            
                         </div>
                     </div>
                 </div>
                 <h3 class="text-xl font-bold mb-2">
+                    <br>
                     Aid for Injured in the Quota Movement
                 </h3>
-                <p class="mb-4">
+                <p class="mb-4 text-slate-400 text-base">
                     The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                 </p>
         
@@ -163,7 +182,7 @@
                         </div>
                         
                         <div class="form-control mt-6">
-                            <button id="btn-add-money-three" class="btn btn-primary bg-[rgb(180,244,97)] text-black">Donate Now</button>
+                            <button id="btn-add-money-three" class="btn btn-primary bg-[rgb(180,244,97)] text-black  hover:bg-slate-400">Donate Now</button>
                         </div>
                     </form>
                 </div>
@@ -177,6 +196,20 @@
    
              
         </div> 
+
+
+        <div id="donationModal" class="mt-14 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center">
+                <h2 class="text-2xl font-bold mb-4">Congratulations!</h2>
+                <img src="assets/coin.png" alt="Dollar Image" class="h-16 mx-auto mb-4">
+                <p class="text-lg mb-2">You have donated to humankind</p>
+                <p class="text-lg font-semibold text-black mb-6">Successfully</p>
+                <button id="closeModal" class="bg-lime-500 hover:bg-slate-400 text-white font-bold py-2 px-4 rounded">
+                    Close Information
+                </button>
+            </div>
+        </div>
+        
         
     </main>
     <footer class="bg-[rgb(249,247,243)] h-16">
