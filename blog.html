@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .arrow {
+            transition: transform 0.3s;
+        }
+        .arrow.rotate {
+            transform: rotate(90deg);
+        }
+    </style>
+
+</head>
+<body>
+    <header class="flex flex-col shadow fixed top-0 w-full z-10">  
+        <!-- <nav class="flex flex-col bg-[rgb(249,247,243)] p-4 shadow fixed top-0 w-full z-10"> -->
+            <nav class="bg-[rgb(249,247,243)]">
+                <div class="flex flex-col md:flex-row items-center justify-between p-3 m-0">
+                    <div class="mb-2 md:mb-0">
+                        <button class="btn" style="background-color: rgb(180, 244, 97);" onclick="window.location.href='index.html'">
+                            Home
+                        </button>
+                    </div>
+                    
+                    
+                    <div class="flex items-center justify-center flex-grow mb-2 md:mb-0">
+                        <img src="assets/logo.png" alt="" class="h-6 mr-2">
+                        <h4 class="text-lg">
+                            Donate Bangladesh
+                        </h4>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <img src="assets/coin.png" alt="" class="h-6 mr-2">
+                        <div class="stats shadow ml-2">
+                            <div class="stat">
+                                <div id="main-balance" class="stat-value text-lg">10000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+        
+        
+        
+
+    </header>
+    <main class="mt-16">
+
+        <body class="flex justify-center items-center min-h-screen p-4">
+
+            <h3 class="text-5xl text-gray-950 mb-6">
+                Important FAQ
+            </h3>
+        
+            <div class="shadow-lg rounded-lg w-full max-w-3xl">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-gray-300">
+                    <div class="flex justify-between items-center p-6 cursor-pointer" onclick="toggleAnswer(0)">
+                        <span class="font-bold text-lg">What is the Document Object Model(DOM)?</span>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="faq-answer hidden p-4">
+                        The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing programs to manipulate the content, structure, and style of the document dynamically.
+                    </div>
+                </div>
+        
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-gray-300">
+                    <div class="flex justify-between items-center p-6 cursor-pointer" onclick="toggleAnswer(1)">
+                        <span class="font-bold text-lg">How do you select an element from the DOM?</span>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="faq-answer hidden p-4">
+                        To select an element from the DOM, we can use various JavaScript methods, each tailored for specific use cases. Methods are document.getElementById(), document.getElementsByClassName(), document.getElementsByTagName(), For more flexible and powerful selections, document.querySelector() can be used to fetch the first element that matches a specified CSS selector, while document.querySelectorAll() retrieves a static NodeList of all matching elements.
+                    </div>
+                </div>
+        
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-gray-300">
+                    <div class="flex justify-between items-center p-6 cursor-pointer" onclick="toggleAnswer(2)">
+                        <span class="font-bold text-lg">What is event delegation in the context of the DOM, and why is it useful?</span>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="faq-answer hidden p-4">
+                        Event delegation is a powerful technique in JavaScript and the DOM that allows us to manage events more efficiently by utilizing the event bubbling phase. Instead of attaching event listeners to individual child elements, we attach a single event listener to a common ancestor (parent) element. This approach allows the event to be captured by the ancestor and subsequently routed to the target child element based on the event's properties.
+                    </div>
+                </div>
+        
+                <!-- FAQ Item 4 -->
+                <div>
+                    <div class="flex justify-between items-center p-6 cursor-pointer" onclick="toggleAnswer(3)">
+                        <span class="font-bold text-lg">How do you manipulate an element's attribute and styles using the DOM?</span>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="faq-answer hidden p-4">
+                        To manipulate an element's attributes and styles using the DOM, we can use several JavaScript methods. For attributes, we can utilize setAttribute() to add or change an attribute's value, getAttribute() to retrieve the current value of an attribute, and removeAttribute() to delete an attribute from the element. Additionally, some attributes can be accessed and modified directly through their corresponding properties, such as id and className. For styling, you can use the style property to change individual CSS styles, like element.style.backgroundColor = 'blue', or use the setProperty() method for more detailed style changes. Furthermore, the classList API allows you to manage classes easily by adding, removing, or toggling classes, enabling bulk style changes without affecting other styles. Together, these methods provide a powerful toolkit for dynamically modifying both the appearance and behavior of web elements.
+                    </div>
+                </div>
+            </div>
+ 
+        </body>
+        
+    </main>
+    <script src="js/blogFunction.js"></script>
+
+</body>

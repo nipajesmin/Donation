@@ -20,3 +20,5 @@ document.getElementById('history-btn')
     // Reset the background color of the donation button
     document.getElementById('donation-btn').style.backgroundColor = '';
     });
+
+    

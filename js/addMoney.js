@@ -26,7 +26,8 @@ document.getElementById('btn-add-money')
     .addEventListener('click', function (event) {
         event.preventDefault();
         const addMoney = getInputFieldValueById('input-add-money');
-
+        const balanceFirst = getTextFieldValueById('noakhali-balance');
+        const oldbalance = getTextFieldValueById('main-balance');
         if(isNaN(addMoney)){
             alert('Failed to add money');
             return;
@@ -34,21 +35,43 @@ document.getElementById('btn-add-money')
         
         //primary level, wrong way to verify. do not try it at your serious website
         if(addMoney >= 1){
-            const balanceFirst = getTextFieldValueById('noakhali-balance');
+            if(addMoney > oldbalance){
+                alert('You do not have enough money to donate');
+                return;
+            }
+            
             const noakhaliNewBalance = balanceFirst + addMoney;
             document.getElementById('noakhali-balance').innerText = noakhaliNewBalance;
 
-            const oldbalance = getTextFieldValueById('main-balance');
+            //const oldbalance = getTextFieldValueById('main-balance');
             const mainNewBalance = oldbalance - addMoney;
             document.getElementById('main-balance').innerText = mainNewBalance;
 
-            // add to transaction history
-            // const p = document.createElement('p');
-            // p.innerText = `Added: ${addMoney} Tk. New Balance: ${newBalance}`;
-            // console.log(p); 
-
+            // add to history
+             //const p = document.createElement('p');
+             //p.innerText = `Added: ${addMoney} Tk. New Balance: ${mainNewBalance}`;
+            // console.log(p);            
             // should be a common function
-            // document.getElementById('transaction-container').appendChild(p);
+             //document.getElementById('history-container').appendChild(p);
+
+             //adding date and time
+            // let donationTime = ""; 
+             const now = new Date();
+             const donationTime = now.toString();  
+             const donationDiv = document.createElement('div');
+
+             donationDiv.classList.add('border', 'border-gray-300', 'rounded-lg', 'p-4');
+         
+             //const pp = document.createElement('pp');
+             //pp.innerText = `Donation made at: ${donationTime}`;
+             donationDiv.innerText = `${addMoney} Taka is Donated for Flood at Noakhali, Bangladesh\n
+            Donation made at: ${donationTime}`;
+
+             //console.log(pp);
+             //document.getElementById('history-container').appendChild(pp);
+             document.getElementById('history-container').appendChild(donationDiv);
+             document.getElementById('history-container').appendChild(donationDiv);
+             
         }
         else{
             alert('Please enter a valid amount.')
@@ -61,7 +84,8 @@ document.getElementById('btn-add-money')
     .addEventListener('click', function (event) {
         event.preventDefault();
         const addMoney = getInputFieldValueById('input-add-feni-money');
-
+        const balanceSecond = getTextFieldValueById('feni-balance');
+        const oldbalance = getTextFieldValueById('main-balance');
         if(isNaN(addMoney)){
             alert('Failed to add money');
             return;
@@ -69,21 +93,31 @@ document.getElementById('btn-add-money')
         
         // primary level,wrong way to verify. do not try it at your serious website
         if(addMoney >= 1){
-            const balanceSecond = getTextFieldValueById('feni-balance');
+            if(addMoney > oldbalance){
+                alert('You do not have enough money to donate');
+                return;
+            }
+            
             const feniNewBalance = balanceSecond + addMoney;
             document.getElementById('feni-balance').innerText = feniNewBalance;
 
-            const oldbalance = getTextFieldValueById('main-balance');
+            //const oldbalance = getTextFieldValueById('main-balance');
             const mainNewBalance = oldbalance - addMoney;
             document.getElementById('main-balance').innerText = mainNewBalance;
 
-            // add to transaction history
-            // const p = document.createElement('p');
-            // p.innerText = `Added: ${addMoney} Tk. New Balance: ${newBalance}`;
-            // console.log(p); 
+            const now = new Date();
+            const donationTime = now.toString();  
+            const donationDiv = document.createElement('div');
 
-            // should be a common function
-            // document.getElementById('transaction-container').appendChild(p);
+            donationDiv.classList.add('border', 'border-gray-300', 'rounded-lg', 'p-4');
+         
+            donationDiv.innerText = `${addMoney} Taka is Donated for Flood Relief in Feni,Bangladesh\n
+            Donation made at: ${donationTime}`;
+
+             //console.log(pp);
+             //document.getElementById('history-container').appendChild(pp);
+             document.getElementById('history-container').appendChild(donationDiv);
+             document.getElementById('history-container').appendChild(donationDiv);
         }
         else{
             alert('Please enter a valid amount.')
@@ -95,7 +129,8 @@ document.getElementById('btn-add-money')
     .addEventListener('click', function (event) {
         event.preventDefault();
         const addMoney = getInputFieldValueById('input-add-quata-money');
-
+        const balanceThird = getTextFieldValueById('quata-balance');
+        const oldbalance = getTextFieldValueById('main-balance');
         if(isNaN(addMoney)){
             alert('Failed to add money');
             return;
@@ -103,23 +138,37 @@ document.getElementById('btn-add-money')
         
         // primary level,wrong way to verify. do not try it at your serious website
         if(addMoney >= 1){
-            const balanceThird = getTextFieldValueById('quata-balance');
+            if(addMoney > oldbalance){
+                alert('You do not have enough money to donate');
+                return;
+            }
+            
             const quataNewBalance = balanceThird + addMoney;
             document.getElementById('quata-balance').innerText = quataNewBalance;
 
-            const oldbalance = getTextFieldValueById('main-balance');
+            //const oldbalance = getTextFieldValueById('main-balance');
             const mainNewBalance = oldbalance - addMoney;
             document.getElementById('main-balance').innerText = mainNewBalance;
-            // add to transaction history
-            // const p = document.createElement('p');
-            // p.innerText = `Added: ${addMoney} Tk. New Balance: ${newBalance}`;
-            // console.log(p); 
+            
+            const now = new Date();
+             const donationTime = now.toString();  
+             const donationDiv = document.createElement('div');
 
-            // should be a common function
-            // document.getElementById('transaction-container').appendChild(p);
+             donationDiv.classList.add('border', 'border-gray-300', 'rounded-lg', 'p-4');
+         
+             //const pp = document.createElement('pp');
+             //pp.innerText = `Donation made at: ${donationTime}`;
+             donationDiv.innerText = `${addMoney} Taka is Donated for Injured in the Quota Movement\n
+             Donation made at: ${donationTime}`;
+
+             //console.log(pp);
+             //document.getElementById('history-container').appendChild(pp);
+             document.getElementById('history-container').appendChild(donationDiv);
+             document.getElementById('history-container').appendChild(donationDiv);
         }
         else{
             alert('Please enter a valid amount.')
         }
 
     })
+    

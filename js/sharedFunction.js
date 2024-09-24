@@ -20,3 +20,14 @@ function showSectionById(id){
     // show the section with the provide id as parameter
     document.getElementById(id).classList.remove('hidden');
 }
+
+
+
+function showSectionById(id) {
+    // Hide both sections
+    document.getElementById('donation-part').classList.add('hidden');
+    document.getElementById('history-part').classList.add('hidden');
+    
+    // Show the specified section
+    document.getElementById(id).classList.remove('hidden');
+}
